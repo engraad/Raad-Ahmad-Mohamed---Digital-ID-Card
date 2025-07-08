@@ -1,0 +1,1394 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eng Raad Yaser | IT </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#3b82f6',
+                        accent: '#60a5fa',
+                        tech: '#1f2937',
+                        'tech-light': '#374151',
+                    },
+                    fontFamily: {
+                        'arabic': ['Tajawal', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+        
+        * {
+            font-family: 'Tajawal', Arial, sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .glass {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .skill-bar {
+            transition: width 2s ease-in-out;
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .typing-animation::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Floating Social Media Sidebar -->
+    <div class="fixed left-0 top-1/2 transform -translate-y-1/2 z-50 bg-white/10 dark:bg-gray-900/20 backdrop-blur-md rounded-r-2xl shadow-2xl border border-white/20">
+        <div class="flex flex-col p-2 space-y-3">
+            <a href="https://www.linkedin.com/in/eng-raad-yaser-aa7828227/" target="_blank" class="social-link group w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg relative overflow-hidden">
+                <i class="fab fa-linkedin-in text-lg z-10"></i>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div class="tooltip absolute left-full ml-3 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                    LinkedIn
+                </div>
+            </a>
+            
+            <a href="https://github.com/engraad" target="_blank" class="social-link group w-12 h-12 bg-gray-800 hover:bg-gray-900 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg relative overflow-hidden">
+                <i class="fab fa-github text-lg z-10"></i>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div class="tooltip absolute left-full ml-3 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                    GitHub
+                </div>
+            </a>
+            <a href="https://www.facebook.com/raad.alasyr/" target="_blank" class="social-link group w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg relative overflow-hidden">
+                <i class="fab fa-facebook text-lg z-10"></i>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div class="tooltip absolute left-full ml-3 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                    Facebook
+                </div>
+            </a>
+            
+            <a href="https://twitter.com/ahmaddev" target="_blank" class="social-link group w-12 h-12 bg-blue-500 hover:bg-blue-600 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg relative overflow-hidden">
+                <i class="fab fa-twitter text-lg z-10"></i>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div class="tooltip absolute left-full ml-3 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                    Twitter
+                </div>
+            </a>
+            
+            <a href="https://api.whatsapp.com/send?phone=967773123263&text=مرحبا%20كيف%20حالك%20مهندس%20رعد%20انا%20اتواصل%20معك%20عن%20طريق%20محفظتك%20الالكترونية" target="_blank" class="social-link group w-12 h-12 bg-green-500 hover:bg-green-600 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg relative overflow-hidden">
+                <i class="fab fa-whatsapp text-lg z-10"></i>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div class="tooltip absolute left-full ml-3 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                    WhatsApp
+                </div>
+            </a>
+            
+            <a href="https://t.me/Ra3d00z" target="_blank" class="social-link group w-12 h-12 bg-blue-400 hover:bg-blue-500 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg relative overflow-hidden">
+                <i class="fab fa-telegram-plane text-lg z-10"></i>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div class="tooltip absolute left-full ml-3 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                    Telegram
+                </div>
+            </a>
+            
+            <a href="https://www.instagram.com/eng_rs_07/" target="_blank" class="social-link group w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg relative overflow-hidden">
+                <i class="fab fa-instagram text-lg z-10"></i>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div class="tooltip absolute left-full ml-3 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                    Instagram
+                </div>
+            </a>
+            
+            <a href="mailto:engraad633@gmail.com" class="social-link group w-12 h-12 bg-red-500 hover:bg-red-600 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg relative overflow-hidden">
+                <i class="fas fa-envelope text-lg z-10"></i>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div class="tooltip absolute left-full ml-3 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                    البريد الإلكتروني
+                </div>
+            </a>
+            
+            <a href="https://youtube.com/" target="_blank" class="social-link group w-12 h-12 bg-red-600 hover:bg-red-700 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg relative overflow-hidden">
+                <i class="fab fa-youtube text-lg z-10"></i>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div class="tooltip absolute left-full ml-3 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                    YouTube
+                </div>
+            </a>
+            
+            <!-- <a href="https://www.facebook.com/raad.alasyr/" target="_blank" class="social-link group w-12 h-12 bg-indigo-600 hover:bg-indigo-700 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg relative overflow-hidden">
+                <i class="fab fa-facebook text-lg z-10"></i>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div class="tooltip absolute left-full ml-3 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                    Facebook
+                </div>
+            </a> -->
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-xl z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-primary dark:text-white">
+                    المهندس رعد 
+                </div>
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">الرئيسية</a>
+                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">نبذة عني</a>
+                    <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">المشاريع</a>
+                    <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">المهارات</a>
+                    <a href="#education" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">التعليم</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">الشهادات</a>
+                    <!-- <a href="#blog" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">المدونة</a> -->
+                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">التواصل</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 dark:text-gray-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white dark:bg-gray-900 shadow-lg hidden">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">الرئيسية</a>
+                <a href="#about" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">نبذة عني</a>
+                <a href="#projects" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">المشاريع</a>
+                <a href="#skills" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">المهارات</a>
+                <a href="#education" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">التعليم</a>
+                <a href="#testimonials" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">الشهادات</a>
+                <!-- <a href="#blog" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">المدونة</a> -->
+                <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">التواصل</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen gradient-bg flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/30"></div>
+        
+        <!-- Animated Tech Icons Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="tech-icon absolute top-20 left-20 text-white/20 text-4xl animate-float" style="animation-delay: 0s;">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="tech-icon absolute top-32 right-32 text-white/15 text-3xl animate-float" style="animation-delay: 1s;">
+                <i class="fab fa-node-js"></i>
+            </div>
+            <div class="tech-icon absolute bottom-40 left-40 text-white/20 text-5xl animate-float" style="animation-delay: 2s;">
+                <i class="fab fa-js-square"></i>
+            </div>
+            <div class="tech-icon absolute bottom-20 right-20 text-white/10 text-6xl animate-float" style="animation-delay: 3s;">
+                <i class="fab fa-python"></i>
+            </div>
+            <div class="tech-icon absolute top-1/2 left-10 text-white/25 text-3xl animate-spin" style="animation-duration: 15s;">
+                <i class="fas fa-cog"></i>
+            </div>
+            <div class="tech-icon absolute top-1/3 right-16 text-white/15 text-4xl animate-pulse">
+                <i class="fab fa-docker"></i>
+            </div>
+            <div class="tech-icon absolute bottom-1/3 left-1/4 text-white/20 text-3xl animate-bounce">
+                <i class="fas fa-database"></i>
+            </div>
+            <div class="tech-icon absolute top-1/4 right-1/3 text-white/15 text-4xl animate-float" style="animation-delay: 4s;">
+                <i class="fab fa-aws"></i>
+            </div>
+            <div class="tech-icon absolute bottom-1/4 right-1/4 text-white/10 text-5xl animate-float" style="animation-delay: 5s;">
+                <i class="fab fa-git-alt"></i>
+            </div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+            <div class="animate-float mb-8">
+                <div class="relative w-40 h-40 mx-auto">
+                    <!-- Profile Image Background -->
+                    <div class="w-full h-full rounded-full bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-lg border-2 border-white/30 flex items-center justify-center shadow-2xl">
+                        <div class="text-6xl">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <!-- Tech Badge -->
+                    <div class="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-2xl shadow-xl animate-pulse">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-slide-up leading-tight">
+               المهندس رعد ياسر احمد 
+            </h1>
+            
+            <div class="mb-8">
+                <p class="text-xl md:text-3xl mb-4 typing-animation font-medium" id="typing-text"> مهندس تكنولوجيا المعلومات ومطور مواقع ويب متكامل</p>
+                <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto leading-relaxed">
+                    متخصص في بناء حلول تقنية مبتكرة وتطبيقات ويب عصرية باستخدام أحدث التقنيات والأطر
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <a href="#projects" class="group bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl flex items-center gap-2">
+                    <i class="fas fa-briefcase"></i>
+                    اطلع على أعمالي
+                    <i class="fas fa-arrow-left group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#contact" class="group border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition-all transform hover:scale-105 backdrop-blur-sm flex items-center gap-2">
+                    <i class="fas fa-phone"></i>
+                    تواصل معي
+                    <i class="fas fa-arrow-left group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-3 gap-6 max-w-md mx-auto text-center">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+                    <div class="text-3xl font-bold text-white">5+</div>
+                    <div class="text-sm text-white/80">سنوات خبرة</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+                    <div class="text-3xl font-bold text-white">20+</div>
+                    <div class="text-sm text-white/80">مشروع مكتمل</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+                    <div class="text-3xl font-bold text-white">20+</div>
+                    <div class="text-sm text-white/80">عميل راضي</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+                <div class="w-1 h-2 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">نبذة عني</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-reveal">
+                    <div class="bg-gradient-to-br from-primary to-secondary p-8 rounded-2xl text-white">
+                        <h3 class="text-2xl font-bold mb-4">مهندس تقنية معلومات متخصص</h3>
+                        <p class="text-lg leading-relaxed mb-6">
+                            أنا مطور مواقع ويب محترف مع خبرة تزيد عن 5 سنوات في تطوير الحلول التقنية المبتكرة. 
+                            أتخصص في بناء تطبيقات الويب الحديثة والمتجاوبة باستخدام أحدث التقنيات والأطر.
+                            ولدي خبرة في مجال الشبكات والكاميرات  والدعم الفني 
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <div class="text-3xl font-bold">20+</div>
+                                <div class="text-sm opacity-90">مشروع مكتمل</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold">20+</div>
+                                <div class="text-sm opacity-90">عميل راضي</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">خدماتي التقنية</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <i class="fas fa-laptop-code text-primary text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white">تطوير الواجهة الأمامية | Frontend </h4>
+                                <p class="text-gray-600 dark:text-gray-300">|  HTML , CSS , bootstrap , JavaScript , jquery, React</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <i class="fas fa-server text-primary text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white">تطوير المواقع  المتكاملة  | Full Stack Developer</h4>
+                                <p class="text-gray-600 dark:text-gray-300">|  Node.js, Python, PHP , Laravel , Wordpress , Modeel </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                              <i class="fas fa-robot text-primary text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white">تطوير تطبيقات الذكاء الاصطناعي </h4>
+                                <p class="text-gray-600 dark:text-gray-300"> | AI Projects</p>
+                            </div>
+                          
+                        </div>
+                        <div class="flex items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <i class="fas fa-network-wired text-primary text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white">برمجة وتركيب الشبكات والكاميرات  </h4>
+                                <p class="text-gray-600 dark:text-gray-300">|  CCNA , CCTV , MICROTECH  </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">مشاريعي المميزة</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    مجموعة من أبرز المشاريع التي عملت عليها والتي تعكس خبرتي في التطوير
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- E-commerce Project -->
+                <div class="project-card bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden scroll-reveal group">
+                    <div class="h-48 gradient-bg flex items-center justify-center relative overflow-hidden">
+                        <!-- Tech Icons Background -->
+                        <div class="absolute inset-0 opacity-20">
+                            <i class="fab fa-react absolute top-4 left-4 text-white text-2xl animate-spin" style="animation-duration: 8s;"></i>
+                            <i class="fas fa-shopping-cart absolute top-4 right-4 text-white text-xl animate-bounce"></i>
+                            <i class="fab fa-node-js absolute bottom-4 left-4 text-white text-xl animate-pulse"></i>
+                            <i class="fas fa-database absolute bottom-4 right-4 text-white text-lg animate-ping"></i>
+                        </div>
+                        <!-- Main Icon -->
+                        <div class="relative z-10 text-center">
+                            <div class="w-20 h-20 mx-auto mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-store text-white text-3xl"></i>
+                            </div>
+                            <p class="text-white/90 text-sm font-medium">متجر إلكتروني</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">متجر إلكتروني متكامل</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+                            منصة تجارة إلكترونية متكاملة مع نظام دفع آمن، إدارة المنتجات، وتتبع الطلبات
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fab fa-react text-xs"></i> React
+                            </span>
+                            <span class="px-3 py-1 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fab fa-node-js text-xs"></i> Node.js
+                            </span>
+                            <span class="px-3 py-1 bg-gray-50 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fas fa-database text-xs"></i> MongoDB
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-primary hover:text-secondary transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fas fa-external-link-alt text-xs"></i> عرض مباشر
+                                </a>
+                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fab fa-github text-xs"></i> GitHub
+                                </a>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Management System -->
+                <div class="project-card bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden scroll-reveal group">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center relative overflow-hidden">
+                        <!-- Tech Icons Background -->
+                        <div class="absolute inset-0 opacity-20">
+                            <i class="fab fa-vuejs absolute top-4 left-4 text-white text-2xl animate-pulse"></i>
+                            <i class="fas fa-chart-line absolute top-4 right-4 text-white text-xl animate-bounce"></i>
+                            <i class="fas fa-tasks absolute bottom-4 left-4 text-white text-xl animate-pulse"></i>
+                            <i class="fas fa-users absolute bottom-4 right-4 text-white text-lg animate-ping"></i>
+                        </div>
+                        <!-- Main Icon -->
+                        <div class="relative z-10 text-center">
+                            <div class="w-20 h-20 mx-auto mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-project-diagram text-white text-3xl"></i>
+                            </div>
+                            <p class="text-white/90 text-sm font-medium">إدارة المشاريع</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">نظام إدارة المشاريع</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+                            تطبيق ويب شامل لإدارة المشاريع والفرق مع ميزات التتبع، التقارير والتعاون
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fab fa-vuejs text-xs"></i> Vue.js
+                            </span>
+                            <span class="px-3 py-1 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fas fa-server text-xs"></i> Express
+                            </span>
+                            <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fas fa-database text-xs"></i> PostgreSQL
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-green-600 hover:text-green-700 transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fas fa-external-link-alt text-xs"></i> عرض مباشر
+                                </a>
+                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-green-600 transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fab fa-github text-xs"></i> GitHub
+                                </a>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Food Delivery App -->
+                <div class="project-card bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden scroll-reveal group">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center relative overflow-hidden">
+                        <!-- Tech Icons Background -->
+                        <div class="absolute inset-0 opacity-20">
+                            <i class="fab fa-react absolute top-4 left-4 text-white text-2xl animate-spin" style="animation-duration: 6s;"></i>
+                            <i class="fas fa-mobile-alt absolute top-4 right-4 text-white text-xl animate-bounce"></i>
+                            <i class="fab fa-google absolute bottom-4 left-4 text-white text-xl animate-pulse"></i>
+                            <i class="fas fa-map-marker-alt absolute bottom-4 right-4 text-white text-lg animate-ping"></i>
+                        </div>
+                        <!-- Main Icon -->
+                        <div class="relative z-10 text-center">
+                            <div class="w-20 h-20 mx-auto mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-utensils text-white text-3xl"></i>
+                            </div>
+                            <p class="text-white/90 text-sm font-medium">توصيل الطعام</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">تطبيق توصيل الطعام</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+                            تطبيق جوال متطور لطلب وتوصيل الطعام مع تتبع الطلبات GPS ونظام دفع متكامل
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fab fa-react text-xs"></i> React Native
+                            </span>
+                            <span class="px-3 py-1 bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fab fa-google text-xs"></i> Firebase
+                            </span>
+                            <span class="px-3 py-1 bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fas fa-layer-group text-xs"></i> Redux
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-purple-600 hover:text-purple-700 transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fab fa-app-store text-xs"></i> App Store
+                                </a>
+                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fab fa-github text-xs"></i> GitHub
+                                </a>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI Chatbot Project -->
+                <div class="project-card bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden scroll-reveal group">
+                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <i class="fas fa-brain absolute top-4 left-4 text-white text-2xl animate-pulse"></i>
+                            <i class="fas fa-robot absolute top-4 right-4 text-white text-xl animate-bounce"></i>
+                            <i class="fab fa-python absolute bottom-4 left-4 text-white text-xl animate-pulse"></i>
+                            <i class="fas fa-comments absolute bottom-4 right-4 text-white text-lg animate-ping"></i>
+                        </div>
+                        <div class="relative z-10 text-center">
+                            <div class="w-20 h-20 mx-auto mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-robot text-white text-3xl"></i>
+                            </div>
+                            <p class="text-white/90 text-sm font-medium">شات بوت ذكي</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">شات بوت AI متطور</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+                            مساعد ذكي مدعوم بالذكاء الاصطناعي لخدمة العملاء مع معالجة اللغة الطبيعية
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-yellow-50 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fab fa-python text-xs"></i> Python
+                            </span>
+                            <span class="px-3 py-1 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fas fa-brain text-xs"></i> TensorFlow
+                            </span>
+                            <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fas fa-cloud text-xs"></i> OpenAI
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-indigo-600 hover:text-indigo-700 transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fas fa-external-link-alt text-xs"></i> تجربة مباشرة
+                                </a>
+                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fab fa-github text-xs"></i> GitHub
+                                </a>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blockchain DApp -->
+                <div class="project-card bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden scroll-reveal group">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <i class="fab fa-bitcoin absolute top-4 left-4 text-white text-2xl animate-spin" style="animation-duration: 10s;"></i>
+                            <i class="fas fa-link absolute top-4 right-4 text-white text-xl animate-bounce"></i>
+                            <i class="fab fa-ethereum absolute bottom-4 left-4 text-white text-xl animate-pulse"></i>
+                            <i class="fas fa-lock absolute bottom-4 right-4 text-white text-lg animate-ping"></i>
+                        </div>
+                        <div class="relative z-10 text-center">
+                            <div class="w-20 h-20 mx-auto mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-cubes text-white text-3xl"></i>
+                            </div>
+                            <p class="text-white/90 text-sm font-medium">بلوك تشين</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">منصة NFT Marketplace</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+                            سوق رقمي لا مركزي لتجارة NFTs مبني على شبكة Ethereum مع محافظ رقمية
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-50 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fab fa-ethereum text-xs"></i> Solidity
+                            </span>
+                            <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fab fa-react text-xs"></i> React
+                            </span>
+                            <span class="px-3 py-1 bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fas fa-network-wired text-xs"></i> Web3
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-orange-600 hover:text-orange-700 transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fas fa-external-link-alt text-xs"></i> عرض مباشر
+                                </a>
+                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-orange-600 transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fab fa-github text-xs"></i> GitHub
+                                </a>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Real Estate Platform -->
+                <div class="project-card bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden scroll-reveal group">
+                    <div class="h-48 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <i class="fas fa-home absolute top-4 left-4 text-white text-2xl animate-pulse"></i>
+                            <i class="fas fa-search absolute top-4 right-4 text-white text-xl animate-bounce"></i>
+                            <i class="fas fa-map-marked-alt absolute bottom-4 left-4 text-white text-xl animate-pulse"></i>
+                            <i class="fas fa-chart-area absolute bottom-4 right-4 text-white text-lg animate-ping"></i>
+                        </div>
+                        <div class="relative z-10 text-center">
+                            <div class="w-20 h-20 mx-auto mb-3 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-building text-white text-3xl"></i>
+                            </div>
+                            <p class="text-white/90 text-sm font-medium">عقارات</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">منصة العقارات الذكية</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+                            منصة شاملة لعرض وبحث العقارات مع جولات افتراضية وتحليلات السوق
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fab fa-vuejs text-xs"></i> Vue.js
+                            </span>
+                            <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fas fa-map text-xs"></i> Google Maps
+                            </span>
+                            <span class="px-3 py-1 bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="fas fa-database text-xs"></i> Redis
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-3">
+                                <a href="#" class="text-teal-600 hover:text-teal-700 transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fas fa-external-link-alt text-xs"></i> عرض مباشر
+                                </a>
+                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-teal-600 transition-colors text-sm font-medium flex items-center gap-1">
+                                    <i class="fab fa-github text-xs"></i> GitHub
+                                </a>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">مهاراتي التقنية</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend Skills -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl scroll-reveal">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-palette text-primary mr-3"></i>
+                        الواجهة الأمامية
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300">React.js</span>
+                                <span class="text-primary font-semibold">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full bg-gradient-to-r from-primary to-secondary" style="width: 0%" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300">Vue.js</span>
+                                <span class="text-primary font-semibold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full bg-gradient-to-r from-primary to-secondary" style="width: 0%" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300">TypeScript</span>
+                                <span class="text-primary font-semibold">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full bg-gradient-to-r from-primary to-secondary" style="width: 0%" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend Skills -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl scroll-reveal">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-server text-primary mr-3"></i>
+                        الواجهة الخلفية
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300">Node.js</span>
+                                <span class="text-primary font-semibold">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full bg-gradient-to-r from-green-500 to-teal-600" style="width: 0%" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300">Python</span>
+                                <span class="text-primary font-semibold">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full bg-gradient-to-r from-green-500 to-teal-600" style="width: 0%" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300">PHP</span>
+                                <span class="text-primary font-semibold">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full bg-gradient-to-r from-green-500 to-teal-600" style="width: 0%" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Database & Tools -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl scroll-reveal">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-database text-primary mr-3"></i>
+                        قواعد البيانات والأدوات
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300">MongoDB</span>
+                                <span class="text-primary font-semibold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-600" style="width: 0%" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300">PostgreSQL</span>
+                                <span class="text-primary font-semibold">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-600" style="width: 0%" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300">Docker</span>
+                                <span class="text-primary font-semibold">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-600" style="width: 0%" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">التعليم والشهادات</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="scroll-reveal">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">التعليم الأكاديمي</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
+                            <h4 class="font-bold text-lg text-gray-800 dark:text-white">بكالوريوس هندسة تقنية المعلومات</h4>
+                            <p class="text-primary font-semibold">جامعة التكنولوجيا</p>
+                            <p class="text-gray-600 dark:text-gray-300">2018 - 2022</p>
+                            <p class="text-gray-600 dark:text-gray-300 mt-2">امتياز مع مرتبة الشرف</p>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
+                            <h4 class="font-bold text-lg text-gray-800 dark:text-white">دبلوم البرمجة المتقدمة</h4>
+                            <p class="text-primary font-semibold">معهد التقنية العالي</p>
+                            <p class="text-gray-600 dark:text-gray-300">2017 - 2018</p>
+                            <p class="text-gray-600 dark:text-gray-300 mt-2">جيد جداً</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">الشهادات المهنية</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-lg flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-aws text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white">AWS Certified Developer</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Amazon Web Services</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-lg flex items-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-google text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white">Google Cloud Professional</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Google Cloud Platform</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-lg flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-microsoft text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white">Microsoft Certified Azure Developer</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Microsoft Azure</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-lg flex items-center">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-react text-orange-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white">React Professional Certificate</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Meta (Facebook)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">آراء العملاء</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-lg scroll-reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            م
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">محمد أحمد</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">مدير شركة التقنيات المتقدمة</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-500 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        "أحمد مطور ممتاز وملتزم. أنجز مشروعنا في الوقت المحدد وبجودة عالية. أنصح بالتعامل معه."
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-lg scroll-reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            س
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">سارة علي</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">مؤسسة شركة الإبداع الرقمي</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-500 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        "تجربة رائعة! أحمد فهم متطلباتنا بسرعة وقدم حلول إبداعية تفوق توقعاتنا."
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-lg scroll-reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            خ
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">خالد يوسف</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">صاحب متجر إلكتروني</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-500 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        "محترف حقيقي! طور لي متجر إلكتروني متكامل وزاد مبيعاتي بنسبة 200%. شكراً أحمد!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">آخر المقالات</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 scroll-reveal">
+                    <div class="h-48 gradient-bg flex items-center justify-center">
+                        <i class="fas fa-code text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                            <i class="fas fa-calendar mr-2"></i>
+                            15 ديسمبر 2023
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">
+                            أفضل الممارسات في React 2024
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            دليل شامل لأفضل الممارسات والتقنيات الحديثة في تطوير تطبيقات React
+                        </p>
+                        <a href="#" class="text-primary hover:text-secondary transition-colors font-semibold">
+                            قراءة المزيد <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 scroll-reveal">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                            <i class="fas fa-calendar mr-2"></i>
+                            10 ديسمبر 2023
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">
+                            تطوير تطبيقات الموبايل بـ React Native
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            خطوات عملية لبناء تطبيقات موبايل احترافية باستخدام React Native
+                        </p>
+                        <a href="#" class="text-green-600 hover:text-green-700 transition-colors font-semibold">
+                            قراءة المزيد <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 scroll-reveal">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-server text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                            <i class="fas fa-calendar mr-2"></i>
+                            5 ديسمبر 2023
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">
+                            بناء APIs قوية مع Node.js
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            تعلم كيفية إنشاء واجهات برمجة تطبيقات آمنة وقابلة للتوسع
+                        </p>
+                        <a href="#" class="text-purple-600 hover:text-purple-700 transition-colors font-semibold">
+                            قراءة المزيد <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">تواصل معي</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    لديك مشروع في ذهنك؟ تحتاج استشارة تقنية؟ لا تتردد في التواصل معي
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="scroll-reveal">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">معلومات التواصل</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white">البريد الإلكتروني</h4>
+                                <p class="text-gray-600 dark:text-gray-300">ahmed@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white">رقم الهاتف</h4>
+                                <p class="text-gray-600 dark:text-gray-300">+967 773123263 | +967 738841970</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white">الموقع</h4>
+                                <p class="text-gray-600 dark:text-gray-300"> الجمهورية اليمنية | مدينة تعز    </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-4">تابعني على</h4>
+                        <div class="flex space-x-4 space-x-reverse">
+                            <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-white hover:bg-gray-900 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white hover:bg-blue-600 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white hover:bg-red-700 transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">الاسم</label>
+                            <input type="text" required="" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:border-primary focus:outline-none transition-colors text-base">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">البريد الإلكتروني</label>
+                            <input type="email" required="" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:border-primary focus:outline-none transition-colors text-base">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">الموضوع</label>
+                            <input type="text" required="" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:border-primary focus:outline-none transition-colors text-base">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">الرسالة</label>
+                            <textarea required="" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:border-primary focus:outline-none transition-colors resize-none text-base"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105">
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-gray-950 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-2">Eng Raad Yaser </h3>
+                <p class="text-gray-400"> IT Engineer  & Full Stack Developer</p>
+            </div>
+            
+            <div class="flex justify-center space-x-6 space-x-reverse mb-8">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-gray-400">
+                    © 2023 أحمد محمد. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Typing animation
+        const typingTexts = [
+             'مهندس تقنية معلومات',
+            'مطور مواقع ويب متكامل',
+            'خبير في التقنيات البرمجية وتطوير المواقع الالكترونية'
+        ];
+        
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById('typing-text');
+        
+        function typeEffect() {
+            const currentText = typingTexts[textIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            let typeSpeed = isDeleting ? 50 : 100;
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % typingTexts.length;
+            }
+            
+            setTimeout(typeEffect, typeSpeed);
+        }
+        
+        typeEffect();
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Skill bars animation
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        const width = bar.getAttribute('data-width');
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 500);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-item').forEach(item => {
+            skillObserver.observe(item.closest('.scroll-reveal'));
+        });
+
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name') || this.querySelector('input[type="text"]').value;
+            const email = formData.get('email') || this.querySelector('input[type="email"]').value;
+            const subject = formData.get('subject') || this.querySelectorAll('input[type="text"]')[1].value;
+            const message = formData.get('message') || this.querySelector('textarea').value;
+            
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                alert('يرجى ملء جميع الحقول');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'جاري الإرسال...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('تم إرسال رسالتك بنجاح! سأتواصل معك قريباً.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Add active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-primary');
+                }
+            });
+        });
+
+        // Add scroll to top functionality
+        let scrollTopBtn = document.createElement('button');
+        scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        scrollTopBtn.className = 'fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg hover:bg-blue-700 transition-all transform hover:scale-110 opacity-0 pointer-events-none z-50';
+        scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.body.appendChild(scrollTopBtn);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.pointerEvents = 'none';
+            }
+        });
+    </script>
+
+
+</body></html>
